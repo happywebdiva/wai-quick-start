@@ -141,8 +141,7 @@
 <h2 class="toc no_toc" id="on-this-page">On this page</h2>
 
 <ul class="toc" id="markdown-toc">
-  <li><a href="#use-progressive-enhancement">Use progressive enhancement</a></li>
-  <li><a href="#adopt-a-responsive-design-approach">Adopt a responsive design approach</a></li>
+  <li><a href="#write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</a></li>
   <li><a href="#use-mark-up-to-convey-meaning-and-structure">Use mark-up to convey meaning and structure</a></li>
   <li><a href="#associate-all-form-elements-with-labels">Associate all form elements with labels</a></li>
   <li><a href="#help-users-avoid-and-correct-mistakes">Help users avoid and correct mistakes</a></li>
@@ -160,34 +159,26 @@
 
 <article class="tip ">
 
-<h2 class="attach_permalink" id="use-progressive-enhancement">Use progressive enhancement</h2>
+<h2 class="attach_permalink" id="write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</h2>
 
-<p>Progressive enhancement starts with the core semantic <abbr>HTML</abbr> presenting the content and functionality. Additional styling and functionality are then progressively added with different technologies, such as CSS or JavaScript. The core content will still be available when the added technology is not available, such as JavaScript blocked by a firewall.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li>No identified W3C resources</li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
-<h2 class="attach_permalink" id="adopt-a-responsive-design-approach">Adopt a responsive design approach</h2>
-
-<p>Use responsive design to adapt different viewport sizes, such as on mobile devices and tablets. Elements can be condensed or rearranged when less space is available. Use <abbr title="Cascading Style Sheet">CSS</abbr> media queries to target styling depending on the width of the viewport. Use <code>em</code> or <code>rem</code> units in the queries to make sure that the design adapts when changing the font size.</p>
-
-<aside class="example"><h3>Example</h3>
-
-<p>[… Media query example with corresponding image showing how change might occur …]</p>
-
-</aside>
+<p>Use responsive design to adapt different zoom states and viewport sizes, such as on mobile devices and tablets. A progressive enhancement approach will help ensure that core functionality and content is available regardless of technology being used.</p>
 
 <aside class="learn_more"><h3>Learn more</h3>
 
 <ul>
+  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>:
+    <ul>
+      <li><a href="/WAI/WCAG20/quickref/#visual-audio-contrast-scale"><abbr title="Success Criteria">SC</abbr> 1.4.4 Resize text</a></li>
+      <li><a href="/WAI/WCAG20/quickref/#consistent-behavior-consistent-functionality"><abbr title="Success Criteria">SC</abbr> 3.2.4 Consistent Identification</a></li>
+    </ul>
+  </li>
+  <li><strong>Background</strong>:
+    <ul>
+      <li><a href="/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding <abbr title="Success Criteria">SC</abbr> 1.4.4 Resize text</a></li>
+      <li><a href="/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-functionality.html">Understanding <abbr title="Success Criteria">SC</abbr> 3.2.4 Consistent Identification</a></li>
+      <li><a href="/TR/mobile-accessibility-mapping/#h-small-screen-size">Small Screen Size</a></li>
+    </ul>
+  </li>
   <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#retiree">Describes how alternative views of zoomed pages can be helpful</a></li>
 </ul>
 
@@ -254,6 +245,8 @@
 
 <h2 class="attach_permalink" id="help-users-avoid-and-correct-mistakes">Help users avoid and correct mistakes</h2>
 
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/157">157</a></div>
+
 <p>Be as forgiving of format as possible when accepting information. For example, accept phone numbers that include spaces and delete the spaces as needed. Clearly identify errors that cannot be auto-corrected. Provide an in-page link for easy access from the error to the field when feasible. Work with content writers to agree on @@@writy bits@@@. </p>
 
 <aside class="example"><h3>Example</h3>
@@ -279,6 +272,8 @@
 <article class="tip ">
 
 <h2 class="attach_permalink" id="reflect-the-reading-order-in-the-code-order">Reflect the reading order in the code order</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/153">153</a></div>
 
 <p>Ensure that the order of elements in the code matches the logical order of the information when presented visually. This can be checked by removing <abbr>CSS</abbr> styling and comparing the order of the content with the visual hierarchy of the page.</p>
 
@@ -325,6 +320,8 @@
 
 <h2 class="attach_permalink" id="ensure-that-all-interactive-elements-are-keyboard-accessible">Ensure that all interactive elements are keyboard accessible</h2>
 
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/155">155</a></div>
+
 <p>Think about keyboard access when developing new interactive elements, such as menus, mouseover information, collapsable accordions, or media players. Use <code>tabindex='0'</code> add an element that does not normally receive focus, such as <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, into the navigation order.</p>
 
 <aside class="example"><h3>Example</h3>
@@ -353,6 +350,8 @@
 <article class="tip ">
 
 <h2 class="attach_permalink" id="check-that-your-code-validates">Check that your code validates</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issues:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/154">154</a> and <a href="https://github.com/w3c/wai-quick-start/issues/118">118</a></div>
 
 <p>Validate HTML and CSS to identify possible compatibility problems. Fix identified problems to reduce the risk of errors on different devices.</p>
 
@@ -384,6 +383,8 @@
 
 <h2 class="attach_permalink" id="include-alternative-text-for-images">Include alternative text for images</h2>
 
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/151">151</a></div>
+
 <p>Ensure that alternative text for images is added to all informative and functional images. Decorative images should have empty alternative text, <code>alt=''</code>, or should be included using <abbr title="Cascading Style Sheet">CSS</abbr>.</p>
 
 <aside class="learn_more"><h3>Learn more</h3>
@@ -402,6 +403,8 @@
 
 <h2 class="attach_permalink" id="ensure-resized-text-is-legible">Ensure resized text is legible</h2>
 
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/156">156</a></div>
+
 <p>Specify container size and position, and text size in relative units, such as <code>em</code>, <code>rem</code>, or percentages. Avoid <code>overflow: hidden</code> causing clipping of enlarged text. Create different content flows when font size is increased to avoid horizontal scrolling.</p>
 
 <aside class="learn_more"><h3>Learn more</h3>
@@ -416,6 +419,8 @@
 <article class="tip ">
 
 <h2 class="attach_permalink" id="ensure-that-captchas-have-accessible-alternatives">Ensure that CAPTCHAs have accessible alternatives</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/159">159</a></div>
 
 <p>CAPTCHAs create problems for many people. If CAPTCHA really needs to be included, ensure that it is simple to understand and includes alternatives for users unable to see and/or hear the test. </p>
 
@@ -433,6 +438,8 @@
 <article class="tip ">
 
 <h2 class="attach_permalink" id="identify-page-language-and-language-changes">Identify page language and language changes</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/146">146</a></div>
 
 <p>Provide an indication of language in the <code>html</code> tag using the <code>lang</code> attribute. Use the <code>lang</code> attribute on specific elements when the language of element differs the rest of the page.</p>
 
