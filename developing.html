@@ -141,48 +141,20 @@
 <h2 class="toc no_toc" id="on-this-page">On this page</h2>
 
 <ul class="toc" id="markdown-toc">
-  <li><a href="#write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</a></li>
   <li><a href="#use-mark-up-to-convey-meaning-and-structure">Use mark-up to convey meaning and structure</a></li>
   <li><a href="#associate-all-form-elements-with-labels">Associate all form elements with labels</a></li>
   <li><a href="#help-users-avoid-and-correct-mistakes">Help users avoid and correct mistakes</a></li>
+  <li><a href="#include-alternative-text-for-images">Include alternative text for images</a></li>
+  <li><a href="#identify-page-language-and-language-changes">Identify page language and language changes</a></li>
   <li><a href="#reflect-the-reading-order-in-the-code-order">Reflect the reading order in the code order</a></li>
+  <li><a href="#write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</a></li>
+  <li><a href="#ensure-resized-text-is-legible">Ensure resized text is legible</a></li>
   <li><a href="#provide-meaning-for-non-standard-interactive-elements">Provide meaning for non-standard interactive elements</a></li>
   <li><a href="#ensure-that-all-interactive-elements-are-keyboard-accessible">Ensure that all interactive elements are keyboard accessible</a></li>
-  <li><a href="#include-alternative-text-for-images">Include alternative text for images</a></li>
-  <li><a href="#ensure-resized-text-is-legible">Ensure resized text is legible</a></li>
   <li><a href="#ensure-that-captchas-have-accessible-alternatives">Ensure that CAPTCHAs have accessible alternatives</a></li>
-  <li><a href="#identify-page-language-and-language-changes">Identify page language and language changes</a></li>
   <li><a href="#learn-more-about-accessibility">Learn more about accessibility</a></li>
 </ul>
 
-<article class="tip ">
-
-<h2 class="attach_permalink" id="write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</h2>
-
-<p>Use responsive design to adapt the display to different zoom states and viewport sizes, such as on mobile devices and tablets. A progressive enhancement approach will help ensure that core functionality and content is available regardless of technology being used.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>:
-    <ul>
-      <li><a href="/WAI/WCAG20/quickref/#visual-audio-contrast-scale"><abbr title="Success Criteria">SC</abbr> 1.4.4 Resize text</a></li>
-      <li><a href="/WAI/WCAG20/quickref/#consistent-behavior-consistent-functionality"><abbr title="Success Criteria">SC</abbr> 3.2.4 Consistent Identification</a></li>
-    </ul>
-  </li>
-  <li><strong>Background</strong>:
-    <ul>
-      <li><a href="/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding <abbr title="Success Criteria">SC</abbr> 1.4.4 Resize text</a></li>
-      <li><a href="/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-functionality.html">Understanding <abbr title="Success Criteria">SC</abbr> 3.2.4 Consistent Identification</a></li>
-      <li><a href="/TR/mobile-accessibility-mapping/#h-small-screen-size">Small Screen Size</a></li>
-    </ul>
-  </li>
-  <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#retiree">Describes how alternative views of zoomed pages can be helpful</a></li>
-</ul>
-
-</article>
-
-</article>
 <article class="tip ">
 
 <h2 class="attach_permalink" id="use-mark-up-to-convey-meaning-and-structure">Use mark-up to convey meaning and structure</h2>
@@ -387,6 +359,43 @@
 </article>
 <article class="tip ">
 
+<h2 class="attach_permalink" id="include-alternative-text-for-images">Include alternative text for images</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/151">151</a></div>
+
+<p>Ensure that alternative text for images is added to all informative and functional images. Decorative images should have empty alternative text, <code>alt=''</code>, or should be included using <abbr>CSS</abbr>.</p>
+
+<aside class="learn_more"><h3>Learn more</h3>
+
+<ul>
+  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>: <a href="/WAI/WCAG20/quickref/#qr-text-equiv-all"><abbr title="Success Criteria">SC</abbr> 1.1.1 Non-text Content</a></li>
+  <li><strong>Tutorial</strong>: <a href="/WAI/tutorials/images/">Images</a></li>
+  <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding <abbr title="Success Criteria">SC</abbr> 1.1.1 Non-text Content</a></li>
+  <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#accountant">Describes the value of text alternatives to a blind user</a></li>
+</ul>
+
+</article>
+
+</article>
+<article class="tip ">
+
+<h2 class="attach_permalink" id="identify-page-language-and-language-changes">Identify page language and language changes</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/146">146</a></div>
+
+<p>Provide an indication of language in the <code>html</code> tag using the <code>lang</code> attribute. Use the <code>lang</code> attribute on specific elements when the language of element differs the rest of the page.</p>
+
+<aside class="learn_more"><h3>Learn more</h3>
+
+<ul>
+  <li><strong>How To</strong>: <a href="/International/questions/qa-html-language-declarations">Declaring language in HTML</a></li>
+</ul>
+
+</article>
+
+</article>
+<article class="tip ">
+
 <h2 class="attach_permalink" id="reflect-the-reading-order-in-the-code-order">Reflect the reading order in the code order</h2>
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/153">153</a></div>
@@ -435,6 +444,51 @@
   <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>: <a href="/WAI/WCAG20/quickref/#qr-minimize-error-identified"><abbr title="Success Criteria">SC</abbr> 1.3.2 Meaningful Sequence</a></li>
   <li><strong>How To</strong>: <a href="/TR/2014/NOTE-WCAG20-TECHS-20140916/G57">Order the content in a meaningful sequence</a></li>
   <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">Understanding <abbr title="Success Criteria">SC</abbr> 1.3.2 Meaningful Sequence</a></li>
+</ul>
+
+</article>
+
+</article>
+<article class="tip ">
+
+<h2 class="attach_permalink" id="write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</h2>
+
+<p>Use responsive design to adapt the display to different zoom states and viewport sizes, such as on mobile devices and tablets. A progressive enhancement approach will help ensure that core functionality and content is available regardless of technology being used.</p>
+
+<aside class="learn_more"><h3>Learn more</h3>
+
+<ul>
+  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>:
+    <ul>
+      <li><a href="/WAI/WCAG20/quickref/#visual-audio-contrast-scale"><abbr title="Success Criteria">SC</abbr> 1.4.4 Resize text</a></li>
+      <li><a href="/WAI/WCAG20/quickref/#consistent-behavior-consistent-functionality"><abbr title="Success Criteria">SC</abbr> 3.2.4 Consistent Identification</a></li>
+    </ul>
+  </li>
+  <li><strong>Background</strong>:
+    <ul>
+      <li><a href="/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding <abbr title="Success Criteria">SC</abbr> 1.4.4 Resize text</a></li>
+      <li><a href="/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-functionality.html">Understanding <abbr title="Success Criteria">SC</abbr> 3.2.4 Consistent Identification</a></li>
+      <li><a href="/TR/mobile-accessibility-mapping/#h-small-screen-size">Small Screen Size</a></li>
+    </ul>
+  </li>
+  <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#retiree">Describes how alternative views of zoomed pages can be helpful</a></li>
+</ul>
+
+</article>
+
+</article>
+<article class="tip ">
+
+<h2 class="attach_permalink" id="ensure-resized-text-is-legible">Ensure resized text is legible</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/156">156</a></div>
+
+<p>Specify container size and position, and text size in relative units, such as <code>em</code>, <code>rem</code>, or percentages. Avoid <code>overflow: hidden</code> causing clipping of enlarged text. Create different content flows when font size is increased to avoid horizontal scrolling.</p>
+
+<aside class="learn_more"><h3>Learn more</h3>
+
+<ul>
+  <li>TBC</li>
 </ul>
 
 </article>
@@ -496,43 +550,6 @@
 </article>
 <article class="tip ">
 
-<h2 class="attach_permalink" id="include-alternative-text-for-images">Include alternative text for images</h2>
-
-<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/151">151</a></div>
-
-<p>Ensure that alternative text for images is added to all informative and functional images. Decorative images should have empty alternative text, <code>alt=''</code>, or should be included using <abbr>CSS</abbr>.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>: <a href="/WAI/WCAG20/quickref/#qr-text-equiv-all"><abbr title="Success Criteria">SC</abbr> 1.1.1 Non-text Content</a></li>
-  <li><strong>Tutorial</strong>: <a href="/WAI/tutorials/images/">Images</a></li>
-  <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding <abbr title="Success Criteria">SC</abbr> 1.1.1 Non-text Content</a></li>
-  <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#accountant">Describes the value of text alternatives to a blind user</a></li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
-<h2 class="attach_permalink" id="ensure-resized-text-is-legible">Ensure resized text is legible</h2>
-
-<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/156">156</a></div>
-
-<p>Specify container size and position, and text size in relative units, such as <code>em</code>, <code>rem</code>, or percentages. Avoid <code>overflow: hidden</code> causing clipping of enlarged text. Create different content flows when font size is increased to avoid horizontal scrolling.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li>TBC</li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
 <h2 class="attach_permalink" id="ensure-that-captchas-have-accessible-alternatives">Ensure that CAPTCHAs have accessible alternatives</h2>
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/159">159</a></div>
@@ -545,23 +562,6 @@
 
 <ul>
   <li>TBC</li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
-<h2 class="attach_permalink" id="identify-page-language-and-language-changes">Identify page language and language changes</h2>
-
-<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/146">146</a></div>
-
-<p>Provide an indication of language in the <code>html</code> tag using the <code>lang</code> attribute. Use the <code>lang</code> attribute on specific elements when the language of element differs the rest of the page.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li><strong>How To</strong>: <a href="/International/questions/qa-html-language-declarations">Declaring language in HTML</a></li>
 </ul>
 
 </article>
