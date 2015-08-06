@@ -141,11 +141,11 @@
 <h2 class="toc no_toc" id="on-this-page">On this page</h2>
 
 <ul class="toc" id="markdown-toc">
-  <li><a href="#use-mark-up-to-convey-meaning-and-structure">Use mark-up to convey meaning and structure</a></li>
   <li><a href="#associate-all-form-elements-with-labels">Associate all form elements with labels</a></li>
-  <li><a href="#help-users-avoid-and-correct-mistakes">Help users avoid and correct mistakes</a></li>
   <li><a href="#include-alternative-text-for-images">Include alternative text for images</a></li>
   <li><a href="#identify-page-language-and-language-changes">Identify page language and language changes</a></li>
+  <li><a href="#use-mark-up-to-convey-meaning-and-structure">Use mark-up to convey meaning and structure</a></li>
+  <li><a href="#help-users-avoid-and-correct-mistakes">Help users avoid and correct mistakes</a></li>
   <li><a href="#reflect-the-reading-order-in-the-code-order">Reflect the reading order in the code order</a></li>
   <li><a href="#write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</a></li>
   <li><a href="#ensure-resized-text-is-legible">Ensure resized text is legible</a></li>
@@ -155,6 +155,84 @@
   <li><a href="#learn-more-about-accessibility">Learn more about accessibility</a></li>
 </ul>
 
+<article class="tip ">
+
+<h2 class="attach_permalink" id="associate-all-form-elements-with-labels">Associate all form elements with labels</h2>
+
+<p>Associate the <code>&lt;label&gt;</code> element with form elements using the <em>for</em> and <em>id</em> attributes. Position the <code>&lt;label&gt;</code> element offscreen using <abbr>CSS</abbr> when the design does not include a visible label. </p>
+
+<aside class="example"><h3>Example</h3>
+
+<div class="mark-up">
+  <figure>
+    <figcaption>Form field with associated label</figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <label for="username">Username:</label>
+<input id="username" type="text">
+
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username:<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
+</div>
+
+</aside>
+
+<aside class="learn_more"><h3>Learn more</h3>
+
+<ul>
+  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>: <a href="/WAI/WCAG20/quickref/#minimize-error-cues"><abbr title="Success Criteria">SC</abbr> 3.3.2 Labels or Instructions</a></li>
+  <li><strong>Tutorial</strong>: <a href="/WAI/tutorials/forms/labels/">Labelling Controls</a></li>
+  <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html">Understanding <abbr title="Success Criteria">SC</abbr> 3.3.2 Labels or Instructions</a></li>
+</ul>
+
+</article>
+
+</article>
+<article class="tip ">
+
+<h2 class="attach_permalink" id="include-alternative-text-for-images">Include alternative text for images</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/151">151</a></div>
+
+<p>Ensure that alternative text for images is added to all informative and functional images. Decorative images should have empty alternative text, <code>alt=''</code>, or should be included using <abbr>CSS</abbr>.</p>
+
+<aside class="learn_more"><h3>Learn more</h3>
+
+<ul>
+  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>: <a href="/WAI/WCAG20/quickref/#qr-text-equiv-all"><abbr title="Success Criteria">SC</abbr> 1.1.1 Non-text Content</a></li>
+  <li><strong>Tutorial</strong>: <a href="/WAI/tutorials/images/">Images</a></li>
+  <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding <abbr title="Success Criteria">SC</abbr> 1.1.1 Non-text Content</a></li>
+  <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#accountant">Describes the value of text alternatives to a blind user</a></li>
+</ul>
+
+</article>
+
+</article>
+<article class="tip ">
+
+<h2 class="attach_permalink" id="identify-page-language-and-language-changes">Identify page language and language changes</h2>
+
+<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/146">146</a></div>
+
+<p>Provide an indication of language in the <code>html</code> tag using the <code>lang</code> attribute. Use the <code>lang</code> attribute on specific elements when the language of element differs the rest of the page.</p>
+
+<aside class="learn_more"><h3>Learn more</h3>
+
+<ul>
+  <li><strong>How To</strong>: <a href="/International/questions/qa-html-language-declarations">Declaring language in HTML</a></li>
+</ul>
+
+</article>
+
+</article>
 <article class="tip ">
 
 <h2 class="attach_permalink" id="use-mark-up-to-convey-meaning-and-structure">Use mark-up to convey meaning and structure</h2>
@@ -253,47 +331,6 @@
 </article>
 <article class="tip ">
 
-<h2 class="attach_permalink" id="associate-all-form-elements-with-labels">Associate all form elements with labels</h2>
-
-<p>Associate the <code>&lt;label&gt;</code> element with form elements using the <em>for</em> and <em>id</em> attributes. Position the <code>&lt;label&gt;</code> element offscreen using <abbr>CSS</abbr> when the design does not include a visible label. </p>
-
-<aside class="example"><h3>Example</h3>
-
-<div class="mark-up">
-  <figure>
-    <figcaption>Form field with associated label</figcaption>
-      <div class="html-example">
-        <div class="rendered">
-          <p>Rendered:</p>
-          <label for="username">Username:</label>
-<input id="username" type="text">
-
-        </div>
-        <div class="code">
-          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username:<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
-</pre>
-
-        </div>
-      </div>
-  </figure>
-</div>
-
-</aside>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>: <a href="/WAI/WCAG20/quickref/#minimize-error-cues"><abbr title="Success Criteria">SC</abbr> 3.3.2 Labels or Instructions</a></li>
-  <li><strong>Tutorial</strong>: <a href="/WAI/tutorials/forms/labels/">Labelling Controls</a></li>
-  <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html">Understanding <abbr title="Success Criteria">SC</abbr> 3.3.2 Labels or Instructions</a></li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
 <h2 class="attach_permalink" id="help-users-avoid-and-correct-mistakes">Help users avoid and correct mistakes</h2>
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/157">157</a></div>
@@ -352,43 +389,6 @@
   <li><strong>Tutorial</strong>: <a href="/WAI/tutorials/forms/validation/">Validating Input</a></li>
   <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html">Understanding <abbr title="Success Criteria">SC</abbr> 3.3.1 Error Identifications</a></li>
   <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#classroomstudent">Describes how helpful errors help a user with dyslexia</a></li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
-<h2 class="attach_permalink" id="include-alternative-text-for-images">Include alternative text for images</h2>
-
-<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/151">151</a></div>
-
-<p>Ensure that alternative text for images is added to all informative and functional images. Decorative images should have empty alternative text, <code>alt=''</code>, or should be included using <abbr>CSS</abbr>.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>: <a href="/WAI/WCAG20/quickref/#qr-text-equiv-all"><abbr title="Success Criteria">SC</abbr> 1.1.1 Non-text Content</a></li>
-  <li><strong>Tutorial</strong>: <a href="/WAI/tutorials/images/">Images</a></li>
-  <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/text-equiv-all.html">Understanding <abbr title="Success Criteria">SC</abbr> 1.1.1 Non-text Content</a></li>
-  <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#accountant">Describes the value of text alternatives to a blind user</a></li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
-<h2 class="attach_permalink" id="identify-page-language-and-language-changes">Identify page language and language changes</h2>
-
-<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/146">146</a></div>
-
-<p>Provide an indication of language in the <code>html</code> tag using the <code>lang</code> attribute. Use the <code>lang</code> attribute on specific elements when the language of element differs the rest of the page.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li><strong>How To</strong>: <a href="/International/questions/qa-html-language-declarations">Declaring language in HTML</a></li>
 </ul>
 
 </article>
