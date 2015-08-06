@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-2a452687.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-1bd4996d.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -136,7 +136,7 @@
   </header>
 
   <div class="inner">
-      <p>These introductory tips cover the basics of accessible front-end web development using HTML, CSS, and JavaScript.</p>
+      <p>These introductory tips cover the basics of accessible front-end web development using <abbr>HTML</abbr>, <abbr>CSS</abbr>, and JavaScript.</p>
 
 <h2 class="toc no_toc" id="on-this-page">On this page</h2>
 
@@ -148,8 +148,6 @@
   <li><a href="#reflect-the-reading-order-in-the-code-order">Reflect the reading order in the code order</a></li>
   <li><a href="#provide-meaning-for-non-standard-interactive-elements">Provide meaning for non-standard interactive elements</a></li>
   <li><a href="#ensure-that-all-interactive-elements-are-keyboard-accessible">Ensure that all interactive elements are keyboard accessible</a></li>
-  <li><a href="#check-that-your-code-validates">Check that your code validates</a></li>
-  <li><a href="#ensure-compatibility-of-your-code">Ensure compatibility of your code</a></li>
   <li><a href="#include-alternative-text-for-images">Include alternative text for images</a></li>
   <li><a href="#ensure-resized-text-is-legible">Ensure resized text is legible</a></li>
   <li><a href="#ensure-that-captchas-have-accessible-alternatives">Ensure that CAPTCHAs have accessible alternatives</a></li>
@@ -161,7 +159,7 @@
 
 <h2 class="attach_permalink" id="write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</h2>
 
-<p>Use responsive design to adapt different zoom states and viewport sizes, such as on mobile devices and tablets. A progressive enhancement approach will help ensure that core functionality and content is available regardless of technology being used.</p>
+<p>Use responsive design to adapt the display to different zoom states and viewport sizes, such as on mobile devices and tablets. A progressive enhancement approach will help ensure that core functionality and content is available regardless of technology being used.</p>
 
 <aside class="learn_more"><h3>Learn more</h3>
 
@@ -191,11 +189,76 @@
 
 <p>Use structural elements to mark-up headings, lists, tables, etc. HTML5 provides additional elements, such as <code>&lt;nav&gt;</code> and <code>&lt;aside&gt;</code>, to better structure your documents. <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles can provide additional meaning, for example, using <code>role='search'</code> to identify search functionality. Work with designers and content writers to agree on meanings and then use them consistently.</p>
 
-<aside class="example"><h3>Example</h3>
+<aside class="example"><h3>Examples</h3>
 
-<p>[… Example of markup along side a visual design highlighting how different elements relate to design components …]</p>
+<div class="mark-up">
+  <figure>
+    <figcaption>Search field using <abbr>WAI-ARIA</abbr></figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <form action="" role="search">
+  <label for="search">Search</label>
+  <input type="search" aria-describedby="search-help">
+  <div id="search-help">Search records by customer id or name</div>
+  <input type="submit" value="Go">
+</form>
 
-<p>[… Consider <em>simple</em> table example …]</p>
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">aria-describedby=</span><span class="s">"search-help"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"search-help"</span><span class="nt">&gt;</span>Search records by customer id or name<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Go"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
+  <figure>
+    <figcaption>HTML5 elements provide additional meaning and structure</figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <section>
+  <article>
+    <h2>Superbear saves the day</h2>
+    <time>7 Aug 2015</time>
+    <p>The city's favorite bear yet again proves his mettle by rescuing a young cat from a tree. Witnesses say that Superbear's efforts were not appreciated by the feline, who inflicted some minor scratch wounds on his rescuer.</p>
+    <aside>
+      <h3>Related</h3>
+      <ul>
+        <li><a href="#">Bear receives key to city</a></li>
+        <li><a href="#">Superbear stands for mayor</a></li>
+      </ul>
+    </aside>
+  </article>
+</section>
+
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;article&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Superbear saves the day<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;time&gt;</span>7 Aug 2015<span class="nt">&lt;/time&gt;</span>
+    <span class="nt">&lt;p&gt;</span>The city's favorite bear yet again proves his mettle by rescuing a young cat from a tree. Witnesses say that Superbear's efforts were not appreciated by the feline, who inflicted some minor scratch wounds on his rescuer.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;aside&gt;</span>
+      <span class="nt">&lt;h3&gt;</span>Related<span class="nt">&lt;/h3&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Bear receives key to city<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Superbear stands for mayor<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/aside&gt;</span>
+  <span class="nt">&lt;/article&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
+</div>
 
 </aside>
 
@@ -220,13 +283,29 @@
 
 <h2 class="attach_permalink" id="associate-all-form-elements-with-labels">Associate all form elements with labels</h2>
 
-<p>Associate the <code>&lt;label&gt;</code> element with form elements using the <em>for</em> and <em>id</em> attributes. Position the <code>&lt;label&gt;</code> element offscreen using CSS when the design does not include a visible label. </p>
+<p>Associate the <code>&lt;label&gt;</code> element with form elements using the <em>for</em> and <em>id</em> attributes. Position the <code>&lt;label&gt;</code> element offscreen using <abbr>CSS</abbr> when the design does not include a visible label. </p>
 
 <aside class="example"><h3>Example</h3>
 
-<pre><code>&lt;label for="username"&gt;
-&lt;input id="username" type="text"&gt;
-</code></pre>
+<div class="mark-up">
+  <figure>
+    <figcaption>Form field with associated label</figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <label for="username">Username:</label>
+<input id="username" type="text">
+
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"username"</span><span class="nt">&gt;</span>Username:<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"username"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
+</div>
 
 </aside>
 
@@ -247,13 +326,50 @@
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/157">157</a></div>
 
-<p>Be as forgiving of format as possible when accepting information. For example, accept phone numbers that include spaces and delete the spaces as needed. Clearly identify errors that cannot be auto-corrected. Provide an in-page link for easy access from the error to the field when feasible. Work with content writers to agree on @@@writy bits@@@. </p>
+<p>Be as forgiving of format as possible when accepting information. For example, accept phone numbers that include spaces and delete the spaces as needed. Clearly identify errors that cannot be auto-corrected. Provide an in-page link for easy access from the error to the field. Work with content writers to agree on content for instructions and messages.</p>
 
-<aside class="example"><h3>Example</h3>
+<aside class="example"><h3>Examples</h3>
 
-<p>[… Simple form with instructions for password requirements or date format …]</p>
+<div class="avoid-mistakes">
+  <figure>
+    <figcaption>Date field with formatting instructions</figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <label id="dob-label" for="dob" tabindex="-1">Date of birth:</label>
+<input id="dob" type="date" name="dob" aria-labelledby="dob-label dob-format">
+<p id="dob-format" tabindex="-1">dd/MMM/YYYY</p>
 
-<p>[… Example set of error notifications, maybe different from the Designing? …]</p>
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;label</span> <span class="na">id=</span><span class="s">"dob-label"</span> <span class="na">for=</span><span class="s">"dob"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>Date of birth:<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"dob"</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">name=</span><span class="s">"dob"</span> <span class="na">aria-labelledby=</span><span class="s">"dob-label dob-format"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"dob-format"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>dd/MMM/YYYY<span class="nt">&lt;/p&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
+  <figure>
+    <figcaption>Phone number field with forgiving validation</figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <label for="phone">Phone:</label>
+<input id="phone" name="phone" type="tel" pattern="^[2-9]\d{2}[- ]?\d{3}[- ]?\d{4}$" aria-describedby="phone-desc">
+<p id="phone-desc">US phone number, of the form ANN-NNN-NNNN, where the first digit is not 0 or 1</p>
+
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"phone"</span><span class="nt">&gt;</span>Phone:<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"phone"</span> <span class="na">name=</span><span class="s">"phone"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">pattern=</span><span class="s">"^[2-9]\d{2}[- ]?\d{3}[- ]?\d{4}$"</span> <span class="na">aria-describedby=</span><span class="s">"phone-desc"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"phone-desc"</span><span class="nt">&gt;</span>US phone number, of the form ANN-NNN-NNNN, where the first digit is not 0 or 1<span class="nt">&lt;/p&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
+</div>
 
 </aside>
 
@@ -279,7 +395,37 @@
 
 <aside class="example"><h3>Example</h3>
 
-<p>[… Show sample page structure (including header, navigation, main, support panel, and footer.  Then show two samples of general code structure one good, one bad …]</p>
+<div class="order">
+  <figure>
+    <figcaption>Product presentation</figcaption>
+    <div>
+      <article class="product">
+        <h3 class="name">All star trainers</h3>
+        <img src="images/trainer-fb116191.png" alt="Red high top trainer with white laces, empty white dot on outside ankle, and white toe cap">
+        <p class="desc">All star trainer for a classic and stylish look.</p>
+        <p class="buy"><a href="javascript:return false"><i class="fa fa-cart-plus"></i> Add to cart</a></p>
+      </article>
+      <div class="two-column">
+        <div class="fail">
+          <p><b>Approach 1:</b> Code order matches visual presentation, but is not logical.</p>
+<pre class="highlight html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-fb116191.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h3&gt;</span>All star trainers<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>All star...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"..."</span><span class="nt">&gt;</span>Add to cart<span class="nt">&lt;/a&gt;</span>
+</pre>
+        </div>
+        <div class="pass">
+          <p><b>Approach 2:</b> Product title is logically viewed first, so presented first in code.</p>
+<pre class="highlight html"><span class="nt">&lt;h3&gt;</span>All star trainers<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-fb116191.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p&gt;</span>All star...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"..."</span><span class="nt">&gt;</span>Add to cart<span class="nt">&lt;/a&gt;</span>
+</pre>
+        </div>
+      </div>
+    </div>
+  </figure>
+</div>
 
 </aside>
 
@@ -311,6 +457,7 @@
 <ul>
   <li><strong><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Requirement</strong>: <a href="/WAI/WCAG20/quickref/#ensure-compat-rsv"><abbr title="Success Criteria">SC</abbr> 4.1.2 Name, Role, Value</a></li>
   <li><strong>Background</strong>: <a href="/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">Understanding <abbr title="Success Criteria">SC</abbr> 4.1.2 Name, Role, Value</a></li>
+  <li><strong>Note</strong>: <a href="/TR/aria-in-html/">Notes on Using ARIA in HTML</a>  </li>
 </ul>
 
 </article>
@@ -322,7 +469,7 @@
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/155">155</a></div>
 
-<p>Think about keyboard access when developing new interactive elements, such as menus, mouseover information, collapsable accordions, or media players. Use <code>tabindex='0'</code> add an element that does not normally receive focus, such as <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, into the navigation order.</p>
+<p>Think about keyboard access when developing new interactive elements, such as menus, mouseover information, collapsable accordions, or media players. Use <code>tabindex='0'</code> to add an element that does not normally receive focus, such as <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, into the navigation order.</p>
 
 <aside class="example"><h3>Example</h3>
 
@@ -349,43 +496,11 @@
 </article>
 <article class="tip ">
 
-<h2 class="attach_permalink" id="check-that-your-code-validates">Check that your code validates</h2>
-
-<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issues:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/154">154</a> and <a href="https://github.com/w3c/wai-quick-start/issues/118">118</a></div>
-
-<p>Validate HTML and CSS to identify possible compatibility problems. Fix identified problems to reduce the risk of errors on different devices.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li>TBC</li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
-<h2 class="attach_permalink" id="ensure-compatibility-of-your-code">Ensure compatibility of your code</h2>
-
-<p>Make sure your code, especially for web applications, is supported by web browsers and assistive technologies. For example, some HTML5 and WAI-ARIA features might not be supported. Some evaluation tools help you check compatibility.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li>TBC</li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
 <h2 class="attach_permalink" id="include-alternative-text-for-images">Include alternative text for images</h2>
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/151">151</a></div>
 
-<p>Ensure that alternative text for images is added to all informative and functional images. Decorative images should have empty alternative text, <code>alt=''</code>, or should be included using <abbr title="Cascading Style Sheet">CSS</abbr>.</p>
+<p>Ensure that alternative text for images is added to all informative and functional images. Decorative images should have empty alternative text, <code>alt=''</code>, or should be included using <abbr>CSS</abbr>.</p>
 
 <aside class="learn_more"><h3>Learn more</h3>
 
@@ -493,7 +608,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      04 August 2015
+  	      06 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
