@@ -148,7 +148,6 @@
   <li><a href="#help-users-avoid-and-correct-mistakes">Help users avoid and correct mistakes</a></li>
   <li><a href="#reflect-the-reading-order-in-the-code-order">Reflect the reading order in the code order</a></li>
   <li><a href="#write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</a></li>
-  <li><a href="#ensure-resized-text-is-legible">Ensure resized text is legible</a></li>
   <li><a href="#provide-meaning-for-non-standard-interactive-elements">Provide meaning for non-standard interactive elements</a></li>
   <li><a href="#ensure-that-all-interactive-elements-are-keyboard-accessible">Ensure that all interactive elements are keyboard accessible</a></li>
   <li><a href="#ensure-that-captchas-have-accessible-alternatives">Ensure that CAPTCHAs have accessible alternatives</a></li>
@@ -453,7 +452,7 @@
 
 <h2 class="attach_permalink" id="write-code-that-adapts-to-users-technology">Write code that adapts to user's technology</h2>
 
-<p>Use responsive design to adapt the display to different zoom states and viewport sizes, such as on mobile devices and tablets. A progressive enhancement approach will help ensure that core functionality and content is available regardless of technology being used.</p>
+<p>Use responsive design to adapt the display to different zoom states and viewport sizes, such as on mobile devices and tablets. Avoid clipping and horizontal scrolling when font size is increased. A progressive enhancement approach will help ensure that core functionality and content is available regardless of technology being used.</p>
 
 <aside class="learn_more"><h3>Learn more</h3>
 
@@ -472,23 +471,6 @@
     </ul>
   </li>
   <li><strong>User Story</strong>: <a href="/WAI/intro/people-use-web/stories#retiree">Describes how alternative views of zoomed pages can be helpful</a></li>
-</ul>
-
-</article>
-
-</article>
-<article class="tip ">
-
-<h2 class="attach_permalink" id="ensure-resized-text-is-legible">Ensure resized text is legible</h2>
-
-<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/156">156</a></div>
-
-<p>Specify container size and position, and text size in relative units, such as <code>em</code>, <code>rem</code>, or percentages. Avoid <code>overflow: hidden</code> causing clipping of enlarged text. Create different content flows when font size is increased to avoid horizontal scrolling.</p>
-
-<aside class="learn_more"><h3>Learn more</h3>
-
-<ul>
-  <li>TBC</li>
 </ul>
 
 </article>
@@ -608,7 +590,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      06 August 2015
+  	      07 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
