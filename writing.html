@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-1bd4996d.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-978da735.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -230,47 +230,53 @@
 
 <div class="heading-structure">
   <figure>
-    <figcaption>No headings used</figcaption>
-    <div>
-      <p><abbr>HTML</abbr> elements provide information on structural hierarchy of a document. Using elements correctly will help convey additional meaning to assistive technology. In many cases, doing so will also make your document easier to edit.</p>
+    <figcaption><button id="no-headings-modal" class="modal-open" type="button">Content presented without headings</button></figcaption>
+    <div id="no-headings-modal-overlay" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="no-headings-modal-title">
+      <div id="no-headings-modal-holder" class="modal-holder">
+        <h2 id="no-headings-modal-title" class="modal-title"><span class="visuallyhidden">Example: </span>Headings and Subheadings</h2>
 
-      <p>For documents longer than three or four paragraphs, headings and subheadings are important for usability and accessibility. They help readers to determine the overall outline of a document and to navigate to specific information of interest.</p>
+        <p><abbr>HTML</abbr> elements provide information on structural hierarchy of a document. Using elements correctly will help convey additional meaning to assistive technology. In many cases, doing so will also make your document easier to edit.</p>
+
+        <p>For documents longer than three or four paragraphs, headings and subheadings are important for usability and accessibility. They help readers to determine the overall outline of a document and to navigate to specific information of interest.</p>
       
-      <p>Headings are classified into levels from one to six. The highest level is "Level 1" and often corresponds to the title of the page or major document section. Sub-headers proceed through increasing header levels. The lower the number, the smaller and more detailed a section.</p>
+        <p>Headings are classified into levels from one to six. The highest level is "Level 1" and often corresponds to the title of the page or major document section. Sub-headers proceed through increasing header levels. The lower the number, the smaller and more detailed a section.</p>
 
-      <p>Visual readers identify headers by scanning pages for text of a larger size or a different style. Assistive technology users are not able to see these visual changes, so changing the style is not a sufficient cue.</p>
+        <p>Visual readers identify headers by scanning pages for text of a larger size or a different style. Assistive technology users are not able to see these visual changes, so changing the style is not a sufficient cue.</p>
 
-      <p>Instead, the headings must be semantically "tagged" so that assistive technology can identify headings. This can be presented to the user as a navigation aid.</p>
+        <p>Instead, the headings must be semantically "tagged" so that assistive technology can identify headings. This can be presented to the user as a navigation aid.</p>
 
-      <p>This makes adding headings one of the most important tools for a screen reader user so that he or she can learn what is on the page. Note that tagging usually triggers a formatting change visually which can be adjusted in many documents.</p>
+        <p>This makes adding headings one of the most important tools for a screen reader user so that he or she can learn what is on the page. Note that tagging usually triggers a formatting change visually which can be adjusted in many documents.</p>
       
-      <cite>Adapted from <a href="http://accessibility.psu.edu/headings/">Headings and Subheadings at Penn State</a></cite>
+        <cite>Adapted from <a href="http://accessibility.psu.edu/headings/">Headings and Subheadings at Penn State</a></cite>
+      </div>
     </div>
   </figure>
   <figure>
-    <figcaption>No headings used</figcaption>
-    <div>
-      <h2><span class="visuallyhidden">Example: </span>Headings and Subheadings</h2>
+    <figcaption><button id="headings-modal" class="modal-open" type="button">Headings used to split content and group topics</button></figcaption>
+    <div id="headings-modal-overlay" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="headings-modal-title">
+      <div id="headings-modal-holder" class="modal-holder">
+        <h2 id="headings-modal-title" class="modal-title"><span class="visuallyhidden">Example: </span>Headings and Subheadings</h2>
       
-      <p><abbr>HTML</abbr> elements provide information on structural hierarchy of a document. Using elements correctly will help convey additional meaning to assistive technology. In many cases, doing so will also make your document easier to edit.</p>
+        <p><abbr>HTML</abbr> elements provide information on structural hierarchy of a document. Using elements correctly will help convey additional meaning to assistive technology. In many cases, doing so will also make your document easier to edit.</p>
 
-      <h3><span class="visuallyhidden">Example: </span>Purpose of Headings</h3>
+        <h3><span class="visuallyhidden">Example: </span>Purpose of Headings</h3>
       
-      <p>For documents longer than three or four paragraphs, headings and subheadings are important for usability and accessibility. They help readers to determine the overall outline of a document and to navigate to specific information of interest.</p>
+        <p>For documents longer than three or four paragraphs, headings and subheadings are important for usability and accessibility. They help readers to determine the overall outline of a document and to navigate to specific information of interest.</p>
       
-      <h4><span class="visuallyhidden">Example: </span>Heading Levels</h4>
+        <h4><span class="visuallyhidden">Example: </span>Heading Levels</h4>
       
-      <p>Headings are classified into levels from one to six. The highest level is "Level 1" and often corresponds to the title of the page or major document section. Sub-headers proceed through increasing header levels. The lower the number, the smaller and more detailed a section.</p>
+        <p>Headings are classified into levels from one to six. The highest level is "Level 1" and often corresponds to the title of the page or major document section. Sub-headers proceed through increasing header levels. The lower the number, the smaller and more detailed a section.</p>
 
-      <h3><span class="visuallyhidden">Example: </span>Meaning vs. Formatting</h3>
+        <h3><span class="visuallyhidden">Example: </span>Meaning vs. Formatting</h3>
       
-      <p>Visual readers identify headers by scanning pages for text of a larger size or a different style. Assistive technology users are not able to see these visual changes, so changing the style is not a sufficient cue.</p>
+        <p>Visual readers identify headers by scanning pages for text of a larger size or a different style. Assistive technology users are not able to see these visual changes, so changing the style is not a sufficient cue.</p>
 
-      <p>Instead, the headings must be semantically "tagged" so that assistive technology can identify headings. This can be presented to the user as a navigation aid.</p>
+        <p>Instead, the headings must be semantically "tagged" so that assistive technology can identify headings. This can be presented to the user as a navigation aid.</p>
 
-      <p>This makes adding headings one of the most important tools for a screen reader user so that he or she can learn what is on the page. Note that tagging usually triggers a formatting change visually which can be adjusted in many documents.</p>
+        <p>This makes adding headings one of the most important tools for a screen reader user so that he or she can learn what is on the page. Note that tagging usually triggers a formatting change visually which can be adjusted in many documents.</p>
       
-      <cite>Adapted from <a href="http://accessibility.psu.edu/headings/">Headings and Subheadings at Penn State</a></cite>
+        <cite>Adapted from <a href="http://accessibility.psu.edu/headings/">Headings and Subheadings at Penn State</a></cite>
+      </div>
     </div>
   </figure>
 </div>
@@ -423,14 +429,14 @@
 
 <div class="text-alternative two-column">
   <figure>
-    <figcaption>Inaccessible alternative text</figcaption>
+    <figcaption>Poor alternative text</figcaption>
     <div>
       <p class="fail"><img src="images/dog-fd54b7dc.jpg" alt="dog"> Off-duty guide dogs often wear a bell. Its ring helps the blind owner keep track of the dog’s location.</p>
       <p><strong>Alternative text for image</strong>: 'dog'</p>
     </div>
   </figure>
   <figure>
-    <figcaption>Accessible alternative text</figcaption>
+    <figcaption>Good alternative text</figcaption>
     <div>
       <p class="pass"><img src="images/dog-fd54b7dc.jpg" alt="Golden labrador with a bell attached to its collar."> Off-duty guide dogs often wear a bell. Its ring helps the blind owner keep track of the dog’s location.</p>
       <p><strong>Alternative text for image</strong>: 'Golden labrador with a bell attached to its collar.'</p>
@@ -614,7 +620,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      06 August 2015
+  	      07 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
@@ -650,5 +656,6 @@ The Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EO
 	</footer>
 	<script src="javascripts/main-9620dbb3.js" type="text/javascript"></script>
   <script src="javascripts/permalink-57e9aea2.js" type="text/javascript"></script>
+  <script src="javascripts/modal-391779b8.js" type="text/javascript"></script>  
 </body>
 </html>
