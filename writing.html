@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-6a15d287.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-a68851f1.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -236,7 +236,7 @@
 
 <div class="heading-structure two-column">
   <figure>
-    <figcaption><a id="no-headings-modal" class="modal-open" href="javascript:return false"><img src="images/headings-poor-0db617ae.png" alt=""><br>Content presented without headings</a></figcaption>
+    <figcaption><a id="no-headings-modal" class="modal-open" href="javascript:return false"><img src="images/headings-poor-374075c8.png" alt=""><br>Content presented without headings</a></figcaption>
     <div id="no-headings-modal-overlay" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="no-headings-modal-title">
       <div id="no-headings-modal-holder" class="modal-holder">
         <h2 id="no-headings-modal-title" class="modal-title"><span class="visuallyhidden">Example: </span>Headings and Subheadings</h2>
@@ -258,7 +258,7 @@
     </div>
   </figure>
   <figure>
-    <figcaption><a id="headings-modal" class="modal-open" href="javascript: return false"><img src="images/headings-good-94c17157.png" alt=""><br>Headings used to split content and group topics</a></figcaption>
+    <figcaption><a id="headings-modal" class="modal-open" href="javascript: return false"><img src="images/headings-good-60a63604.png" alt=""><br>Headings used to split content and group topics</a></figcaption>
     
     <div id="headings-modal-overlay" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="headings-modal-title">
       <div id="headings-modal-holder" class="modal-holder">
@@ -506,35 +506,32 @@
 
 <div class="errors">
   <figure>
-    <figcaption>Example of clear form instructions and errors</figcaption>
+    <figcaption>Example of clear form instructions</figcaption>
     <div>
-      <div class="error-list">
-        <p>Please correct the following errors.</p>
-        <ol class="fa-ul">
-          <li id="error_email"><span class="fa fa-li fa-exclamation-triangle"></span><a href="javascript:document.getElementById('username').focus()">Unfortunately the username 'superbear' is already in use.</a><br>
-            The following usernames are available:
-            <ul>
-              <li><a href="javascript:var elem = document.getElementById('username'); elem.value = 'superbear10'; elem.focus();">superbear10</a></li>
-              <li><a href="javascript:var elem = document.getElementById('username'); elem.value = 'superbear11'; elem.focus();">superbear11</a></li>
-              <li><a href="javascript:var elem = document.getElementById('username'); elem.value = 'superbear12'; elem.focus();">superbear12</a></li>
-            </ul>
-          </li>
-        </ol>
-      </div>
       <form action="">
         <legend>Login details</legend>
-        <p class="instruction"><span class='required'>Required fields</span> are in red and marked with an <span class='required'>✻</span></p>
         <p>Provide a username and password to allow your application to be saved.</p>
         <p id="password-desc">Your password should be at least six characters and contain at least one number (0-9).</p>
+        <p class="instruction"><span class='required'>Required fields</span> are in red and marked with an <span class='required'>✻</span></p>
         <div class="row">
           <label class="required" for="username">Username ✻</label>
-          <input type="text" id="username" name="username" value="superbear">
+          <input type="text" id="username" name="username" value="">
         </div>
         <div class="row">
           <label class="required" for="password">Password ✻</label>
           <input aria-describedby="password-desc" type="password" id="username" name="username" value="">
         </div>
       </form>
+    </div>
+  </figure>
+  <figure>
+    <figcaption>Example of clear error messages</figcaption>
+    <div>
+      <ol class="fa-ul error-list">
+        <li id="error_email"><span class="fa fa-li fa-exclamation-triangle"></span><a href="javascript:return false">The username 'superbear' is already in use.</a></li>
+        <li id="error_email"><span class="fa fa-li fa-exclamation-triangle"></span><a href="javascript:return false">The password needs to include at least one number.</a><br>
+        </li>
+      </ol>
     </div>
   </figure>
 </div>
@@ -627,7 +624,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      07 August 2015
+  	      10 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
