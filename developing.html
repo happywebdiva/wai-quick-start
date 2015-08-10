@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-a68851f1.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-c34ecf8d.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -493,12 +493,57 @@
 
 <p>Use <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> to provide information on function and state for custom widgets, such as accordions and custom-made buttons. For example, <code>role='button'</code> and <code>state='pressed'</code>. Additional code is required to implement the behavior of such widgets, such as pressing interaction.</p>
 
-<aside class="example"><h3>Example</h3>
-<div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/142">142</a></div>
-
 <p>[… Example of hamburger menu, list of images as radio select, or collapsable accordion …]</p>
 
+<aside class="example"><h3>Example</h3>
+
+<div class="non-standard">
+  <figure>
+    <figcaption>Accessible slider control</figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <p id="slider-label">Number of tickets:</p>
+<div class="slider">
+  <button id="slider-control" class="slider-control"  role="slider" aria-valuetext="0" aria-valuenow="0" aria-valuemax="10" aria-valuemin="0" aria-labelledby="slider-label" tabindex="0"></button>
+</div>
+<input id="slider-value" class="slider-value" type="number" min="0" max="10" step="1" value="0">
+
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"slider-label"</span><span class="nt">&gt;</span>Number of tickets:<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slider"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"slider-control"</span> <span class="na">class=</span><span class="s">"slider-control"</span>  <span class="na">role=</span><span class="s">"slider"</span> <span class="na">aria-valuetext=</span><span class="s">"0"</span> <span class="na">aria-valuenow=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"10"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-labelledby=</span><span class="s">"slider-label"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"slider-value"</span> <span class="na">class=</span><span class="s">"slider-value"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"10"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">value=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
+  <figure>
+    <figcaption>Accessible switch control</figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+            <p id="switch-label">Lights:</p>
+  <div id="switch" class="switch" role="checkbox" aria-checked="false" aria-labelledby="switch-label" tabindex="0"><span>Off</span></div>
+</form>
+
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html">  <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"switch-label"</span><span class="nt">&gt;</span>Lights:<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"switch"</span> <span class="na">class=</span><span class="s">"switch"</span> <span class="na">role=</span><span class="s">"checkbox"</span> <span class="na">aria-checked=</span><span class="s">"false"</span> <span class="na">aria-labelledby=</span><span class="s">"switch-label"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;span&gt;</span>Off<span class="nt">&lt;/span&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
+</div>
+
 </aside>
+<div class="related-issue"><i class="fa fa-github"></i><strong>Comment on Example in GitHub:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/142">142</a></div>
 
 <aside class="learn_more"><h3>Learn more</h3>
 
@@ -603,7 +648,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      07 August 2015
+  	      10 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
@@ -637,7 +682,7 @@ The Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EO
 			</div>
     </div>
 	</footer>
-	<script src="javascripts/main-9620dbb3.js" type="text/javascript"></script>
+	<script src="javascripts/main-e4cd7925.js" type="text/javascript"></script>
   <script src="javascripts/permalink-57e9aea2.js" type="text/javascript"></script>
   <script src="javascripts/modal-391779b8.js" type="text/javascript"></script>  
 </body>

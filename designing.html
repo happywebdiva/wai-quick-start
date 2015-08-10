@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-a68851f1.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-c34ecf8d.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -656,13 +656,36 @@
 
 <aside class="example"><h3>Example</h3>
 
-<ul>
-  <li>[… Home icon with functional text 'Home' …]</li>
-  <li>For example, appropriate text alternative for a search button would be "search", not "magnifying glass".</li>
-  <li>maybe use an example from BAD. Could use the "logo"and show both the too detailed bad alt and the good alt.</li>
-  <li>http://www.w3.org/WAI/intro/cycle.png alt = illustration with arrow going from content at the top through authoring tools at left to content at the bottom, and an arrow going from the content at the bottom through assistive technologies and user agents at the right and back to content at the top" – but maybe too complex</li>
-  <li>http://www.w3.org/WAI/intro/iui-scroll.png alt="Illustration of 4 scroll down user actions (described in the main content) going into a filter labeled IndieUI Events. Under filter is 'scrollrequest(x/y)', and an arrow pointing to it from a Web App." – but maybe too complex</li>
-</ul>
+<div class="text-alternative">
+  <figure>
+    <figcaption>Example where alternative text indicates function</figcaption>
+    <div>
+      <ul class="course-select">
+        <li class="closed"><img src="images/arrow-right-abc59572.png" alt="Open">English <span class="number" title="Number of clasess">10</span></li>
+        <li class="closed"><img src="images/arrow-right-abc59572.png" alt="Open">Maths <span class="number" title="Number of clasess">14</span></li>
+        <li class="open"><img src="images/arrow-down-d32cc32a.png" alt="Close">Languages <span class="number" title="Number of clasess">4</span>
+          <ul>
+            <li>French</li>
+            <li>German</li>
+            <li>Spanish</li>
+            <li>Mandarin</li>
+          </ul>
+        </li>
+        <li class="closed"><img class="closed" src="images/arrow-right-abc59572.png" alt="Open">Social Sciences <span class="number" title="Number of clasess">8</span></li>
+        <li><span class="etc">...</span></li>
+      </ul>
+      <p>Alternative text for the arrows specifies their purpose within the interface, that is 'open' and 'close'.</p>
+    </div>
+  </figure>
+
+  <figure>
+    <figcaption>Example where alternative text conveys meaning</figcaption>
+    <div>
+      <button type="button"><img src="images/padlock-28782d72.png" alt="Secure">Proceed to Checkout</button>
+      <p>Alternative text for the padlock image indicates a secure purchasing process.</p>
+    </div>
+  </figure>
+</div>
 
 </aside>
 
@@ -792,7 +815,7 @@ The Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EO
 			</div>
     </div>
 	</footer>
-	<script src="javascripts/main-9620dbb3.js" type="text/javascript"></script>
+	<script src="javascripts/main-e4cd7925.js" type="text/javascript"></script>
   <script src="javascripts/permalink-57e9aea2.js" type="text/javascript"></script>
   <script src="javascripts/modal-391779b8.js" type="text/javascript"></script>  
 </body>
