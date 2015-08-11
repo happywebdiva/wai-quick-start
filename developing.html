@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-c5fad442.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-0b34d027.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -562,13 +562,97 @@
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/155">155</a></div>
 
-<p>Think about keyboard access when developing new interactive elements, such as menus, mouseover information, collapsable accordions, or media players. Use <code>tabindex='0'</code> to add an element that does not normally receive focus, such as <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, into the navigation order.</p>
+<p>Think about keyboard access when developing new interactive elements, such as menus, mouseover information, collapsable accordions, or media players. Use <code>tabindex='0'</code> to add an element that does not normally receive focus, such as <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, into the navigation order. Use scripting to capture and respond to keyboard events.</p>
 
 <aside class="example"><h3>Example</h3>
+
+<div class="keyboard-accessible">
+  <figure>
+    <figcaption>Accessible menu icon</figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <div id="example-button" class="menu-button" role="button" tabindex="0"><i class="fa fa-bars"></i> Menu</div>
+<div id="example-button-menu" class="menu" aria-hidden="true" tabindex="-1">
+  <ul>
+    <li><a href="javascript:return false">About</a></li>
+    <li><a href="javascript:return false">News</a></li>
+    <li><a href="javascript:return false">Tickets</a></li>
+    <li><a href="javascript:return false">Fun</a></li>
+  </ul>
+</div>
+
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"example-button"</span> <span class="na">class=</span><span class="s">"menu-button"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-bars"</span><span class="nt">&gt;&lt;/i&gt;</span> Menu<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"example-button-menu"</span> <span class="na">class=</span><span class="s">"menu"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:return false"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:return false"</span><span class="nt">&gt;</span>News<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:return false"</span><span class="nt">&gt;</span>Tickets<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:return false"</span><span class="nt">&gt;</span>Fun<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre>
+
+        </div>
+      </div>
+    
+      <script type="text/javascript">
+        // Note that this is not generalized code
+        // and is not recommended for production use
+        function toggleMenu(el) {
+  if( el.getAttribute('aria-hidden') == 'true' ) {
+    el.setAttribute('aria-hidden', 'false');
+    el.focus();
+  } else {
+    el.setAttribute('aria-hidden', 'true');
+  }
+}
+    
+var menuButton = document.getElementById('example-button');
+
+menuButton.addEventListener('keydown', function(e) {
+  // Toggle the menu when SPACE or RETURN are pressed
+  if(e.keyCode && (e.keyCode == 32 || e.keyCode == 13)) {
+    toggleMenu(document.getElementById('example-button-menu'));
+  }
+});
+
+menuButton.addEventListener('click', function(e) {
+  toggleMenu(document.getElementById('example-button-menu'));
+});
+
+      </script>
+      <div class="javascript code">
+        <p>Code Snippet:</p><pre class="highlight javascript"><span class="kd">function</span> <span class="nx">toggleMenu</span><span class="p">(</span><span class="nx">el</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span><span class="p">(</span> <span class="nx">el</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'aria-hidden'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'true'</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'aria-hidden'</span><span class="p">,</span> <span class="s1">'false'</span><span class="p">);</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">el</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">'aria-hidden'</span><span class="p">,</span> <span class="s1">'true'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+    
+<span class="kd">var</span> <span class="nx">menuButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'example-button'</span><span class="p">);</span>
+
+<span class="nx">menuButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'keydown'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Toggle the menu when SPACE or RETURN are pressed
+</span>  <span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">==</span> <span class="mi">32</span> <span class="o">||</span> <span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">==</span> <span class="mi">13</span><span class="p">))</span> <span class="p">{</span>
+    <span class="nx">toggleMenu</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'example-button-menu'</span><span class="p">));</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">menuButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">toggleMenu</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'example-button-menu'</span><span class="p">));</span>
+<span class="p">});</span>
+</pre>
+
+      </div>
+  </figure>
+</div>
+
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/143">143</a></div>
-
-<p>[… <strong>Note:</strong> May be too complex to create an example for …]</p>
-
 </aside>
 
 <aside class="learn_more"><h3>Learn more</h3>
@@ -648,7 +732,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      10 August 2015
+  	      11 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
