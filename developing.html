@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-a3003fc2.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-70dc8393.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -336,7 +336,7 @@
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/157">157</a></div>
 
-<p>Be as forgiving of format as possible when accepting information. For example, accept phone numbers that include spaces and delete the spaces as needed. Clearly identify errors that cannot be auto-corrected. Provide an in-page link for easy access from the error to the field. Work with content writers to agree on content for instructions and messages.</p>
+<p>Be as forgiving of format as possible when processing user input. For example, accept phone numbers that include spaces and delete the spaces as needed. Clearly identify errors that cannot be auto-corrected. Provide an in-page link for easy access from the error to the field. Work with content writers to agree on content for instructions and messages.</p>
 
 <aside class="example"><h3>Examples</h3>
 
@@ -402,7 +402,7 @@
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/153">153</a></div>
 
-<p>Ensure that the order of elements in the code matches the logical order of the information when presented visually. This can be checked by removing <abbr>CSS</abbr> styling and comparing the order of the content with the visual hierarchy of the page.</p>
+<p>Ensure that the order of elements in the code matches the logical order of the information when presented visually. One way to check this is to remove <abbr>CSS</abbr> styling and comparing the order of the content with the visual hierarchy of the page.</p>
 
 <aside class="example"><h3>Example</h3>
 
@@ -411,25 +411,25 @@
     <figcaption>Product presentation</figcaption>
     <div>
       <article class="product">
-        <h3 class="name">All star trainers</h3>
-        <img src="images/trainer-fb116191.png" alt="Red high top trainer with white laces, empty white dot on outside ankle, and white toe cap">
-        <p class="desc">All star trainer for a classic and stylish look.</p>
+        <h3 class="name">Space trainers</h3>
+        <img src="images/trainer-1b28d7cc.png" alt="Red high top trainer with white laces, empty white dot on outside ankle, and white toe cap">
+        <p class="desc">Space trainer for a classic and stylish look.</p>
         <p class="buy"><a href="javascript:return false"><i class="fa fa-cart-plus"></i> Add to cart</a></p>
       </article>
       <div class="two-column">
         <div class="fail">
           <p><b>Approach 1:</b> Code order matches visual presentation, but is not logical.</p>
-<pre class="highlight html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-fb116191.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
-<span class="nt">&lt;h3&gt;</span>All star trainers<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;p&gt;</span>All star...<span class="nt">&lt;/p&gt;</span>
+<pre class="highlight html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-1b28d7cc.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Space trainers<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;p&gt;</span>Space...<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"..."</span><span class="nt">&gt;</span>Add to cart<span class="nt">&lt;/a&gt;</span>
 </pre>
         </div>
         <div class="pass">
           <p><b>Approach 2:</b> Product title is logically viewed first, so presented first in code.</p>
-<pre class="highlight html"><span class="nt">&lt;h3&gt;</span>All star trainers<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-fb116191.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
-<span class="nt">&lt;p&gt;</span>All star...<span class="nt">&lt;/p&gt;</span>
+<pre class="highlight html"><span class="nt">&lt;h3&gt;</span>Space trainers<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-1b28d7cc.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p&gt;</span>Space...<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"..."</span><span class="nt">&gt;</span>Add to cart<span class="nt">&lt;/a&gt;</span>
 </pre>
         </div>
@@ -732,7 +732,7 @@ menuButton.addEventListener('click', function(e) {
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      11 August 2015
+  	      13 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
