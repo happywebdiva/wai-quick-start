@@ -158,7 +158,7 @@
 
 <h2 class="attach_permalink" id="associate-all-form-elements-with-labels">Associate all form elements with labels</h2>
 
-<p>Associate the <code>&lt;label&gt;</code> element with form elements using the <em>for</em> and <em>id</em> attributes. Position the <code>&lt;label&gt;</code> element offscreen using <abbr>CSS</abbr> when the design does not include a visible label. </p>
+<p>Associate the <code>&lt;label&gt;</code> element with form elements using the <em>for</em> and <em>id</em> attributes. Position the <code>&lt;label&gt;</code> element offscreen using <abbr>CSS</abbr> when the design does not include a visible label. Beware of doing this as many sighted people may still misinterpret the required input without an obvious label.</p>
 
 <aside class="example"><h3>Example</h3>
 
@@ -242,33 +242,9 @@
 <aside class="example"><h3>Examples</h3>
 
 <div class="mark-up">
+  @@@Swapped order and changed caption of structure example @@@
   <figure>
-    <figcaption>Search field using <abbr>WAI-ARIA</abbr></figcaption>
-      <div class="html-example">
-        <div class="rendered">
-          <p>Rendered:</p>
-          <form action="" role="search">
-  <label for="search">Search</label>
-  <input type="search" aria-describedby="search-help">
-  <div id="search-help">Search records by customer id or name</div>
-  <input type="submit" value="Go">
-</form>
-
-        </div>
-        <div class="code">
-          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">aria-describedby=</span><span class="s">"search-help"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"search-help"</span><span class="nt">&gt;</span>Search records by customer id or name<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Go"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/form&gt;</span>
-</pre>
-
-        </div>
-      </div>
-  </figure>
-  <figure>
-    <figcaption>HTML5 elements provide additional meaning and structure</figcaption>
+    <figcaption>Basic HTML adds structure to content; HTML5 elements provide additional meaning</figcaption>
       <div class="html-example">
         <div class="rendered">
           <p>Rendered:</p>
@@ -308,6 +284,31 @@
         </div>
       </div>
   </figure>
+  <figure>
+    <figcaption>Search field using <abbr>WAI-ARIA</abbr></figcaption>
+      <div class="html-example">
+        <div class="rendered">
+          <p>Rendered:</p>
+          <form action="" role="search">
+  <label for="search">Search</label>
+  <input type="search" aria-describedby="search-help">
+  <div id="search-help">Search records by customer id or name</div>
+  <input type="submit" value="Go">
+</form>
+
+        </div>
+        <div class="code">
+          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span> <span class="na">role=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">aria-describedby=</span><span class="s">"search-help"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"search-help"</span><span class="nt">&gt;</span>Search records by customer id or name<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Go"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</pre>
+
+        </div>
+      </div>
+  </figure>
 </div>
 
 </aside>
@@ -341,6 +342,7 @@
 <aside class="example"><h3>Examples</h3>
 
 <div class="avoid-mistakes">
+  @@@Remove date example and use less nerdy phone example@@@
   <figure>
     <figcaption>Date field with formatting instructions</figcaption>
       <div class="html-example">
@@ -418,6 +420,7 @@
       </article>
       <div class="two-column">
         <div class="fail">
+          @@@Change from Approach 1/2 to Bad and Good@@
           <p><b>Approach 1:</b> Code order matches visual presentation, but is not logical.</p>
 <pre class="highlight html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-1b28d7cc.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
 <span class="nt">&lt;h3&gt;</span>Space trainers<span class="nt">&lt;/h3&gt;</span>
@@ -491,7 +494,7 @@
 
 <h2 class="attach_permalink" id="provide-meaning-for-non-standard-interactive-elements">Provide meaning for non-standard interactive elements</h2>
 
-<p>Use <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> to provide information on function and state for custom widgets, such as accordions and custom-made buttons. For example, <code>role='button'</code> and <code>state='pressed'</code>. Additional code is required to implement the behavior of such widgets, such as pressing interaction.</p>
+<p>Use <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> to provide information on function and state for custom widgets, such as accordions and custom-made buttons. For example, <code>role='slider'</code> and <code>aria-expanded='true'</code>. Additional code is required to implement the behavior of such widgets, such as pressing interaction.</p>
 
 <aside class="example"><h3>Example</h3>
 
@@ -657,7 +660,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      13 August 2015
+  	      14 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
