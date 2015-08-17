@@ -341,40 +341,20 @@
 <aside class="example"><h3>Examples</h3>
 
 <div class="avoid-mistakes">
-  @@@Remove date example and use less nerdy phone example@@@
   <figure>
-    <figcaption>Date field with formatting instructions</figcaption>
-      <div class="html-example">
-        <div class="rendered">
-          <p>Rendered:</p>
-          <label id="dob-label" for="dob" tabindex="-1">Date of birth:</label>
-<input id="dob" type="date" name="dob" aria-labelledby="dob-label dob-format">
-<p id="dob-format" tabindex="-1">dd/MMM/YYYY</p>
-
-        </div>
-        <div class="code">
-          <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;label</span> <span class="na">id=</span><span class="s">"dob-label"</span> <span class="na">for=</span><span class="s">"dob"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>Date of birth:<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"dob"</span> <span class="na">type=</span><span class="s">"date"</span> <span class="na">name=</span><span class="s">"dob"</span> <span class="na">aria-labelledby=</span><span class="s">"dob-label dob-format"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"dob-format"</span> <span class="na">tabindex=</span><span class="s">"-1"</span><span class="nt">&gt;</span>dd/MMM/YYYY<span class="nt">&lt;/p&gt;</span>
-</pre>
-
-        </div>
-      </div>
-  </figure>
-  <figure>
-    <figcaption>Phone number field with forgiving validation</figcaption>
+    <figcaption>Australian phone number field with forgiving validation</figcaption>
       <div class="html-example">
         <div class="rendered">
           <p>Rendered:</p>
           <label for="phone">Phone:</label>
-<input id="phone" name="phone" type="tel" pattern="^[2-9]\d{2}[- ]?\d{3}[- ]?\d{4}$" aria-describedby="phone-desc">
-<p id="phone-desc">US phone number, of the form ANN-NNN-NNNN, where the first digit is not 0 or 1</p>
+<input id="phone" name="phone" type="tel" pattern="^(\(0[1-9]{1}\))?[0-9 -]{8}$" aria-describedby="phone-desc">
+<p id="phone-desc">For example, (02) 1234 1234</p>
 
         </div>
         <div class="code">
           <p>Code Snippet:</p><pre class="highlight html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"phone"</span><span class="nt">&gt;</span>Phone:<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"phone"</span> <span class="na">name=</span><span class="s">"phone"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">pattern=</span><span class="s">"^[2-9]\d{2}[- ]?\d{3}[- ]?\d{4}$"</span> <span class="na">aria-describedby=</span><span class="s">"phone-desc"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"phone-desc"</span><span class="nt">&gt;</span>US phone number, of the form ANN-NNN-NNNN, where the first digit is not 0 or 1<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"phone"</span> <span class="na">name=</span><span class="s">"phone"</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">pattern=</span><span class="s">"^(\(0[1-9]{1}\))?[0-9 -]{8}$"</span> <span class="na">aria-describedby=</span><span class="s">"phone-desc"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"phone-desc"</span><span class="nt">&gt;</span>For example, (02) 1234 1234<span class="nt">&lt;/p&gt;</span>
 </pre>
 
         </div>
