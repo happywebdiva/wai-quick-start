@@ -242,7 +242,6 @@
 <aside class="example"><h3>Examples</h3>
 
 <div class="mark-up">
-  @@@Swapped order and changed caption of structure example @@@
   <figure>
     <figcaption>Basic HTML adds structure to content; HTML5 elements provide additional meaning</figcaption>
       <div class="html-example">
@@ -410,28 +409,27 @@
 
 <div class="order">
   <figure>
-    <figcaption>Product presentation</figcaption>
+    <figcaption>Two approaches to coding presentation of a product</figcaption>
     <div>
       <article class="product">
         <h3 class="name">Space trainers</h3>
-        <img src="images/trainer-1b28d7cc.png" alt="Red high top trainer with white laces, empty white dot on outside ankle, and white toe cap">
+        <img src="images/trainer-f3eb1b9c.png" alt="Green high top trainer with white laces, empty white dot on outside ankle, and white toe cap">
         <p class="desc">Space trainer for a classic and stylish look.</p>
         <p class="buy"><a href="javascript:return false"><i class="fa fa-cart-plus"></i> Add to cart</a></p>
       </article>
       <div class="two-column">
         <div class="fail">
-          @@@Change from Approach 1/2 to Bad and Good@@
-          <p><b>Approach 1:</b> Code order matches visual presentation, but is not logical.</p>
-<pre class="highlight html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-1b28d7cc.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+          <p><b>Code order does not reflect reading order:</b> Order matches visual presentation, but is not logical.</p>
+<pre class="highlight html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-f3eb1b9c.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
 <span class="nt">&lt;h3&gt;</span>Space trainers<span class="nt">&lt;/h3&gt;</span>
 <span class="nt">&lt;p&gt;</span>Space...<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"..."</span><span class="nt">&gt;</span>Add to cart<span class="nt">&lt;/a&gt;</span>
 </pre>
         </div>
         <div class="pass">
-          <p><b>Approach 2:</b> Product title is logically viewed first, so presented first in code.</p>
+          <p><b>Code order reflects reading order:</b> Product title is logically viewed first, so presented first in code.</p>
 <pre class="highlight html"><span class="nt">&lt;h3&gt;</span>Space trainers<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-1b28d7cc.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-f3eb1b9c.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
 <span class="nt">&lt;p&gt;</span>Space...<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"..."</span><span class="nt">&gt;</span>Add to cart<span class="nt">&lt;/a&gt;</span>
 </pre>
@@ -660,7 +658,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      14 August 2015
+  	      17 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
