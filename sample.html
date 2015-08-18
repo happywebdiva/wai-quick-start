@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-1c3ae801.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-2f0cab1b.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -121,6 +121,10 @@
   #examples p:first-of-type {
     margin-top: 1em;
   }
+  #examples .other {
+    margin-left: 2em;
+    color: #595959;
+  }
 </style>
 
 <p>The different sizes reflect how the icon will look on the overview page, as a heading in a tip page, and in the section navigation within a tip page.</p>
@@ -133,41 +137,43 @@
       <li>Overview: <span class="fa fa-paint-brush" style="font-size: 260%"></span>
           Heading: <span class="fa fa-paint-brush" style="font-size: 145%"></span>
           Section Nav: <span class="fa fa-paint-brush" style="font-size: 100%"></span>
-          <p><b>Pros</b>: Simple, clean, works well at all sizes, conveys visual design</p>
-          <p><b>Cons</b>: Does not covey interaction design</p>
+          <p><b>Pros</b>: Simple, clean, works well at all sizes</p>
+          <p><b>Cons</b>: Conveys only art/visual design; Does not covey interaction design at all, which is a significant part of this page</p>
       </li>
       <li>Overview: <img width="37" src="images/designing-large-3c428de8.png" alt="">
           Heading: <img width="22" src="images/designing-large-3c428de8.png" alt="">
           Section Nav: <img width="15" src="images/designing-small-0f7a27c3.png" alt="">
           <p><b>Pros</b>: Conveys design for a digital platform</p>
-          <p><b>Cons</b>: More complicated, difficult to understand at small sizes</p>
+          <p><b>Cons</b>: Not as clear at smallest size</p>
       </li>
       <li>Overview: <img width="37" src="images/designing-2-large-d05ed441.png" alt="">
           Heading: <img width="22" src="images/designing-2-large-d05ed441.png" alt="">
           Section Nav: <img width="15" src="images/designing-2-large-d05ed441.png" alt="">
-          <p><b>Pros</b>: Conveys interaction design</p>
-          <p><b>Cons</b>: More complicated, difficult to understand at small sizes, may not too much about interaction design</p>
+          <p><b>Pros</b>: Conveys page design</p>
+          <p><b>Cons</b>: More complicated, not clear at small sizes</p>
       </li>
     </ol>
-    <p>Other icons considered:<br><br></p>
-    <ul>
-      <li>Overview: <span class="flaticon-compass56" style="font-size: 260%"></span>
-          Heading: <span class="flaticon-compass56" style="font-size: 145%"></span>
-          Section Nav: <span class="flaticon-compass56" style="font-size: 100%"></span>
-      </li>
-      <li>Overview: <span class="flaticon-design21" style="font-size: 260%"></span>
-          Heading: <span class="flaticon-design21" style="font-size: 145%"></span>
-          Section Nav: <span class="flaticon-design21" style="font-size: 100%"></span>
-      </li>
-      <li>Overview: <span class="flaticon-graphicseditor8" style="font-size: 260%"></span>
-          Heading: <span class="flaticon-graphicseditor8" style="font-size: 145%"></span>
-          Section Nav: <span class="flaticon-graphicseditor8" style="font-size: 100%"></span>
-      </li>
-      <li>Overview: <span class="flaticon-paintbrush2" style="font-size: 260%"></span>
-          Heading: <span class="flaticon-paintbrush2" style="font-size: 145%"></span>
-          Section Nav: <span class="flaticon-paintbrush2" style="font-size: 100%"></span>
-      </li>
-    </ul>
+    <div class="other">
+      <p>Other icons considered:<br><br></p>
+      <ul>
+        <li>Overview: <span class="flaticon-compass56" style="font-size: 260%"></span>
+            Heading: <span class="flaticon-compass56" style="font-size: 145%"></span>
+            Section Nav: <span class="flaticon-compass56" style="font-size: 100%"></span>
+        </li>
+        <li>Overview: <span class="flaticon-design21" style="font-size: 260%"></span>
+            Heading: <span class="flaticon-design21" style="font-size: 145%"></span>
+            Section Nav: <span class="flaticon-design21" style="font-size: 100%"></span>
+        </li>
+        <li>Overview: <span class="flaticon-graphicseditor8" style="font-size: 260%"></span>
+            Heading: <span class="flaticon-graphicseditor8" style="font-size: 145%"></span>
+            Section Nav: <span class="flaticon-graphicseditor8" style="font-size: 100%"></span>
+        </li>
+        <li>Overview: <span class="flaticon-paintbrush2" style="font-size: 260%"></span>
+            Heading: <span class="flaticon-paintbrush2" style="font-size: 145%"></span>
+            Section Nav: <span class="flaticon-paintbrush2" style="font-size: 100%"></span>
+        </li>
+      </ul>
+    </div>
   </li>
   <li>Evaluating
     <p>The bug icon </p>
@@ -175,39 +181,39 @@
       <li>Overview: <span class="fa fa-bug" style="font-size: 260%"></span>
           Heading: <span class="fa fa-bug" style="font-size: 145%"></span>
           Section Nav: <span class="fa fa-bug" style="font-size: 100%"></span>
-          <p><b>Pros</b>: Simple, clean, works well at all sizes, common icon for QA activities</p>
-          <p><b>Cons</b>: May not be immediately understood by non-QA readers
-          </p>
+          <p><b>Pros</b>: Simple, clean, works well at all sizes; "bug" is common icon for programmer and QA</p>
+          <p><b>Cons</b>: Won't be immediately understood by all (some in EOWG thought of it as crawling through a website)          </p>
       </li>
     </ol>
-    <p>Other icons considered:<br><br></p>
-    <ul>
-    
-      <li>Overview: <span class="fa fa-clipboard" style="font-size: 260%"></span>
-          Heading: <span class="fa fa-clipboard" style="font-size: 145%"></span>
-          Section Nav: <span class="fa fa-clipboard" style="font-size: 100%"></span>
-      </li>
-      <li>Overview: <span class="fa fa-clipboard" style="font-size: 260%"></span>
-          Heading: <span class="fa fa-clipboard" style="font-size: 145%"></span>
-          Section Nav: <span class="fa fa-clipboard" style="font-size: 100%"></span>
-      </li>
-      <li>Overview: <span class="flaticon-screen124" style="font-size: 260%"></span>
-          Heading: <span class="flaticon-screen124" style="font-size: 145%"></span>
-          Section Nav: <span class="flaticon-screen124" style="font-size: 100%"></span>
-      </li>
-      <li>Overview: <span class="flaticon-desktop20" style="font-size: 260%"></span>
-          Heading: <span class="flaticon-desktop20" style="font-size: 145%"></span>
-          Section Nav: <span class="flaticon-desktop20" style="font-size: 100%"></span>
-      </li>
-      <li>Overview: <span class="flaticon-magnifier24" style="font-size: 260%"></span>
-          Heading: <span class="flaticon-magnifier24" style="font-size: 145%"></span>
-          Section Nav: <span class="flaticon-magnifier24" style="font-size: 100%"></span>
-      </li>
-      <li>Overview: <span class="fa fa-heartbeat" style="font-size: 260%"></span>
-          Heading: <span class="fa fa-heartbeat" style="font-size: 145%"></span>
-          Section Nav: <span class="fa fa-heartbeat" style="font-size: 100%"></span>
-      </li>
-    </ul>
+    <div class="other">
+      <p>Other icons considered:<br><br></p>
+      <ul>
+        <li>Overview: <span class="fa fa-clipboard" style="font-size: 260%"></span>
+            Heading: <span class="fa fa-clipboard" style="font-size: 145%"></span>
+            Section Nav: <span class="fa fa-clipboard" style="font-size: 100%"></span>
+        </li>
+        <li>Overview: <span class="fa fa-clipboard" style="font-size: 260%"></span>
+            Heading: <span class="fa fa-clipboard" style="font-size: 145%"></span>
+            Section Nav: <span class="fa fa-clipboard" style="font-size: 100%"></span>
+        </li>
+        <li>Overview: <span class="flaticon-screen124" style="font-size: 260%"></span>
+            Heading: <span class="flaticon-screen124" style="font-size: 145%"></span>
+            Section Nav: <span class="flaticon-screen124" style="font-size: 100%"></span>
+        </li>
+        <li>Overview: <span class="flaticon-desktop20" style="font-size: 260%"></span>
+            Heading: <span class="flaticon-desktop20" style="font-size: 145%"></span>
+            Section Nav: <span class="flaticon-desktop20" style="font-size: 100%"></span>
+        </li>
+        <li>Overview: <span class="flaticon-magnifier24" style="font-size: 260%"></span>
+            Heading: <span class="flaticon-magnifier24" style="font-size: 145%"></span>
+            Section Nav: <span class="flaticon-magnifier24" style="font-size: 100%"></span>
+        </li>
+        <li>Overview: <span class="fa fa-heartbeat" style="font-size: 260%"></span>
+            Heading: <span class="fa fa-heartbeat" style="font-size: 145%"></span>
+            Section Nav: <span class="fa fa-heartbeat" style="font-size: 100%"></span>
+        </li>
+      </ul>
+    </div>
   </li>
   <li>Writing
     <ol>
@@ -265,7 +271,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      14 August 2015
+  	      18 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
