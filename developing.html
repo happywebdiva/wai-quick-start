@@ -7,7 +7,7 @@
   Quick Start Tips &bull; WAI
   </title>
   <meta name="viewport" content="width=device-width">
-  <link href="stylesheets/main-e15d9b85.css" rel="stylesheet" type="text/css" />
+  <link href="stylesheets/main-31edfdc9.css" rel="stylesheet" type="text/css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--[if IE 7]><link href="http://www.w3.org/WAI/ie-old.css" rel="stylesheet" type="text/css" /><![endif]-->
   <script src="javascripts/modernizr-a1c597b5.js" type="text/javascript"></script>
@@ -158,7 +158,7 @@
 
 <h2 class="attach_permalink" id="associate-all-form-elements-with-labels">Associate all form elements with labels</h2>
 
-<p>Associate the <code>&lt;label&gt;</code> element with form elements using the <em>for</em> and <em>id</em> attributes. Position the <code>&lt;label&gt;</code> element offscreen using <abbr>CSS</abbr> when the design does not include a visible label. Beware of doing this as many sighted people may still misinterpret the required input without an obvious label.</p>
+<p>Associate every form control with a label. This can be achieved using the <code>&lt;label&gt;</code> element with linked <code>for</code> and <code>id</code> attributes, or using <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> attributes. In specific situations it may be acceptable to hide <code>&lt;label&gt;</code> elements visually, but in most cases labels are needed to help readers understand the required input.</p>
 
 <aside class="example"><h3>Example</h3>
 
@@ -219,7 +219,7 @@
 
 <h2 class="attach_permalink" id="identify-page-language-and-language-changes">Identify page language and language changes</h2>
 
-<p>Provide an indication of language in the <code>html</code> tag using the <code>lang</code> attribute. Use the <code>lang</code> attribute on specific elements when the language of element differs from the rest of the page.</p>
+<p>Indicate the primary language of every page by using the <code>lang</code> attribute in the <code>html</code> tag. Use the <code>lang</code> attribute on specific elements when the language of element differs from the rest of the page.</p>
 
 <aside class="learn_more"><h3>Learn more</h3>
 
@@ -246,7 +246,7 @@
 
 <h2 class="attach_permalink" id="use-mark-up-to-convey-meaning-and-structure">Use mark-up to convey meaning and structure</h2>
 
-<p>Use structural elements to mark-up headings, lists, tables, etc. HTML5 provides additional elements, such as <code>&lt;nav&gt;</code> and <code>&lt;aside&gt;</code>, to better structure your documents. <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles can provide additional meaning, for example, using <code>role='search'</code> to identify search functionality. Work with designers and content writers to agree on meanings and then use them consistently.</p>
+<p>Use appropriate mark-up for headings, lists, tables, etc. HTML5 provides additional elements, such as <code>&lt;nav&gt;</code> and <code>&lt;aside&gt;</code>, to better structure your content. <abbr>WAI-ARIA</abbr> roles can provide additional meaning, for example, using <code>role='search'</code> to identify search functionality. Work with designers and content writers to agree on meanings and then use them consistently.</p>
 
 <aside class="example"><h3>Examples</h3>
 
@@ -342,7 +342,7 @@
 
 <h2 class="attach_permalink" id="help-users-avoid-and-correct-mistakes">Help users avoid and correct mistakes</h2>
 
-<p>Be as forgiving of format as possible when processing user input. For example, accept phone numbers that include spaces and delete the spaces as needed. Clearly identify errors that cannot be auto-corrected. Provide an in-page link for easy access from the error to the field. Work with content writers to agree on content for instructions and messages.</p>
+<p>Be as forgiving of format as possible when processing user input. For example, accept phone numbers that include spaces and delete the spaces as needed. Clearly identify errors that cannot be auto-corrected. Work with content writers to agree on content for instructions and messages.</p>
 
 <aside class="example"><h3>Examples</h3>
 
@@ -388,7 +388,7 @@
 
 <div class="related-issue"><i class="fa fa-github"></i><strong>Related Issue:</strong> <a href="https://github.com/w3c/wai-quick-start/issues/153">153</a></div>
 
-<p>Ensure that the order of elements in the code matches the logical order of the information when presented visually. One way to check this is to remove <abbr>CSS</abbr> styling and comparing the order of the content with the visual hierarchy of the page.</p>
+<p>Ensure that the order of elements in the code matches the logical order of the information when presented visually. One way to check this is to remove <abbr>CSS</abbr> styling and compare the order of the content with the visual hierarchy of the page.</p>
 
 <aside class="example"><h3>Example</h3>
 
@@ -404,7 +404,7 @@
       </article>
       <div class="two-column">
         <div class="fail">
-          <p><b>Code order does not reflect reading order:</b> Order matches visual presentation, but is not logical.</p>
+          <p><b>Code order does not reflect logical reading order</b> - image is before product name.</p>
 <pre class="highlight html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-f3eb1b9c.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
 <span class="nt">&lt;h3&gt;</span>Space trainers<span class="nt">&lt;/h3&gt;</span>
 <span class="nt">&lt;p&gt;</span>Space...<span class="nt">&lt;/p&gt;</span>
@@ -412,7 +412,7 @@
 </pre>
         </div>
         <div class="pass">
-          <p><b>Code order reflects reading order:</b> Product title is logically viewed first, so presented first in code.</p>
+          <p><b>Code order reflects logical reading order</b> - product name is before image.</p>
 <pre class="highlight html"><span class="nt">&lt;h3&gt;</span>Space trainers<span class="nt">&lt;/h3&gt;</span>
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/trainer-f3eb1b9c.png"</span> <span class="na">alt=</span><span class="s">"..."</span><span class="nt">&gt;</span>
 <span class="nt">&lt;p&gt;</span>Space...<span class="nt">&lt;/p&gt;</span>
@@ -518,7 +518,7 @@
 
 <h2 class="attach_permalink" id="ensure-that-all-interactive-elements-are-keyboard-accessible">Ensure that all interactive elements are keyboard accessible</h2>
 
-<p>Think about keyboard access when developing new interactive elements, such as menus, mouseover information, collapsable accordions, or media players. Use <code>tabindex='0'</code> to add an element that does not normally receive focus, such as <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, into the navigation order. Use scripting to capture and respond to keyboard events.</p>
+<p>Think about keyboard access, especially when developing interactive elements, such as menus, mouseover information, collapsable accordions, or media players. Use <code>tabindex='0'</code> to add an element that does not normally receive focus, such as <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, into the navigation order, when it is being used for interaction. Use scripting to capture and respond to keyboard events.</p>
 
 <aside class="example"><h3>Example</h3>
 
@@ -620,6 +620,7 @@
   <li><a href="/WAI/tutorials/">Web Accessibility Tutorials</a>: Shows you how to develop web content that is accessible to people with disabilities</li>
   <li><a href="/WAI/demos/bad/">Before and After Demonstration</a>: Example accessible and inaccessible websites that share the same visual design, with annotations that highlight key accessibility barriers and repairs, and evaluation reports for <abbr>WCAG</abbr> 2.0</li>
   <li><a href="/WAI/ER/tools/">Web Accessibility Evaluation Tools List</a>: Provides a range of tools to help explore the accessibility of code</li>
+  <li><a href="/WAI/intro/aria"><abbr>WAI-ARIA</abbr> Overview</a>: Introduction to <abbr>WAI-ARIA</abbr> with links to all the specifications</li>
 </ul>
 
 </article>
@@ -646,7 +647,7 @@
 			<ul>
 				<li><strong>Status:</strong>
 	        [EDITOR’S DRAFT] updated
-  	      27 August 2015
+  	      31 August 2015
 				</li>
 	      <li>
   <strong>Editors:</strong>
